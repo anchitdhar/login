@@ -4,8 +4,8 @@
 <div style = "border: 2px solid #000;">
     <h1>This is the body</h1>
     <p>Body goes here</p>
-    {% for question in questions %}
-        {% include 'personal/snippets/body_snippet.html' with value = question %}
+    {% for account in accounts %}
+        <p>{{account}}</p>
     {% endfor %}
 
 </div>
