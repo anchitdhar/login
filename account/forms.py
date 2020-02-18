@@ -1,0 +1,10 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from account.models import Account
+
+class RegisterationForm(UserCreationForm):
+    email = forms.EmailField(max_length=60,help_text='Add valid email')
+
+    class Meta:
+        model =Account
+        fields =("email","username","password1","password2")
